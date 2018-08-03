@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+	<header class="page-header">
+		<nav class="main-nav  main-nav--closed  main-nav--nojs  page-header__nav">
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list">
+
+					<li class="main-nav__item">
+						<a class="main-nav__link  main-nav__link--active">Главная</a>
+						<span class="main-nav__item--close"></span>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="photo.html">Фото и Видео</a>
+					</li>
+
+					<li class="logo  main-nav__logo">
+						<a class="logo__link" href="index.html">
+							<picture>
+								<source media="(min-width: 1200px)" srcset="img/page-header__logo--desktop.svg">
+								<img src="img/page-header__logo.svg" alt="logo">
+							</picture>
+						</a>
+						<button class="main-nav__toggle" name="menu-toggle" type="button"></button>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="form.html">Форма отзыва</a>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="https://htmlacademy.ru/">Html academy</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="page-header__image-wrapper">
+			<img src="img/page-header__text-index.svg" alt="text-index">
+		</div>
+
+	</header>
+
+	<main class="page-main">
+		<h2 class="page-main__slogan">СЕДОНА — небольшой городок в АРИЗОНЕ,
+			<br> заслуживающий большего!</h2>
+		<h3 class="page-main__subtitle">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h3>
+
+		<div class="features  page-main__features">
+
+			<div class="features__item">
+				<div class="features-descr  features-descr--triangle">
+					<h3 class="features-descr__title">Настоящий
+						<br> городок</h3>
+					<div class="features-descr__number">— №1 —</div>
+					<h4 class="features-descr__subtitle">Седона не аттракцион для туристов, там течет своя жизнь</h4>
+				</div>
+				<div class="features__img  features__img--city">
+				</div>
+			</div>
+
+			<div class="features-info">
+				<div class="features-info__item  features-info__item--home">
+					<h2 class="features-info__title">Жилье</h2>
+					<p class="features-info__text">
+						Рекомендуем пожить в настоящем мотеле, все как в кино!
+					</p>
+				</div>
+
+				<div class="features-info__item  features-info__item--gift">
+					<h2 class="features-info__title">Сувениры</h2>
+					<p class="features-info__text">
+						Не только китайского, но и местного производства!
+					</p>
+				</div>
+
+				<div class="features-info__item  features-info__item--food">
+					<h2 class="features-info__title">Еда</h2>
+					<p class="features-info__text">
+						Всегда заказывайте фирменный бургер, Вы не разочаруетесь!
+					</p>
+				</div>
+			</div>
+
+			<div class="features__item">
+				<div class="features-descr">
+					<h3 class="features-descr__title">Там есть
+						<br> мост дьявола</h3>
+					<div class="features-descr__number">— №2 —</div>
+					<h4 class="features-descr__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно
+					</h4>
+				</div>
+				<div class="features__img  features__img--bridge">
+				</div>
+			</div>
+
+			<div class="features__wrapper--disable">
+				<div class="features-descr  features-descr--disable">
+					<h3 class="features-descr__title">Небольшая
+						<br> площадь</h3>
+					<div class="features-descr__number">— №3 —</div>
+					<h4 class="features-descr__subtitle">Все интересные места находятся очень близко
+					</h4>
+				</div>
+
+				<div class="features-descr  features-descr--disable">
+					<h3 class="features-descr__title">Красивая
+						<br> дорога</h3>
+					<div class="features-descr__number">— №4 —</div>
+					<h4 class="features-descr__subtitle">Ехать в седону из Лас-Вегаса совсем не&nbsp;скучно!
+					</h4>
+				</div>
+
+				<div class="features-descr  features-descr--disable">
+					<h3 class="features-descr__title">Мало
+						<br> туристов</h3>
+					<div class="features-descr__number">— №5 —</div>
+					<h4 class="features-descr__subtitle">Большинство едет в гранд каньон и толпится там
+					</h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="search-hotel  page-main__search-hotel">
+			<h2 class="search-hotel__title">Заинтересовались?</h2>
+			<p class="search-hotel__text">
+				Укажите предполагаемые даты поездки,
+				<br> и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в седоне
+			</p>
+			<a class="btn  search-hotel__btn" href="form.html">Найти гостиницу</a>
+		</div>
+
+		<div class="index-map  page-main__index-map">
+		</div>
+	</main>
+
+	<footer class="page-footer">
+		<b class="page-footer__hashtag">#visitsedona</b>
+
+		<div class="social page-footer__social">
+			<a class="btn  social__btn--twr" href=""></a>
+			<a class="btn  social__btn--fb" href=""></a>
+			<a class="btn  social__btn--youtube" href=""></a>
+		</div>
+
+		<div class="page-footer__copyright">
+			<span>Разработано</span>
+			<a href="https://htmlacademy.ru/">
+				<svg class="htmlacademy" width="27px" height="34px" viewBox="0 0 154.38 195.33">
+					<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+				</svg>
+
+			</a>
+		</div>
+	</footer>
+
+	<script src="js/common.js"></script>
+</body>
+
+</html>
