@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body class="inner-page">
+	<header class="page-header">
+		<nav class="main-nav  main-nav--closed  main-nav--nojs  page-header__nav">
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list">
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="index.html">Главная</a>
+						<span class="main-nav__item--close"></span>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="photo.html">Фото и Видео</a>
+					</li>
+
+					<li class="logo  main-nav__logo">
+						<a class="logo__link" href="index.html">
+							<picture>
+								<source media="(min-width: 1200px)" srcset="img/page-header__logo--desktop.svg">
+								<img src="img/page-header__logo.svg" alt="logo">
+							</picture>
+						</a>
+						<button class="main-nav__toggle" name="menu-toggle" type="button">
+						</button>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link  main-nav__link--active">Форма отзыва</a>
+					</li>
+
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="https://htmlacademy.ru/">Html academy</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="page-header__image-wrapper">
+			<img src="img/page-main__text-inner.svg" alt="text-index">
+		</div>
+
+	</header>
+
+	<main class="page-main">
+		<div class="review">
+			<h1 class="review__title">Оставьте свой отзыв</h1>
+			<p class="review__text">Помогите нашим отелям стать лучше! оставьте отзыв о них,
+				<br> а также о посещенных вами достопримечательностях</p>
+		</div>
+
+		<form class="form" action="">
+
+			<fieldset class="fullname">
+				<h2>Представьтесь:</h2>
+				<p>
+					<label>
+						Имя*:
+						<input class="fullname__name" type="text" name="name">
+					</label>
+				</p>
+				<p>
+					<label>
+						Фамилия*:
+						<input class="fullname__surname" type="text" name="surname">
+					</label>
+				</p>
+				<p>
+					<label>
+						Отчество:
+						<input class="fullname__patronymic" type="text" name="patronymic">
+					</label>
+				</p>
+			</fieldset>
+
+			<fieldset class="contacts">
+				<h2>Контактная информация:</h2>
+				<p>
+					<label>
+						Контактный телефон*:
+						<input type="tel" name="phone" placeholder="Введите телефон">
+						<span class="phone-icon"></span>
+					</label>
+				</p>
+				<p>
+					<label>
+						Электронная почта*:
+						<input type="email" name="mail" placeholder="Введите e-mail">
+						<span class="email-icon"></span>
+					</label>
+				</p>
+			</fieldset>
+
+			<fieldset class="feeling">
+				<h2>Ваше общее впечатление:</h2>
+				<p>
+					<label class="radio">
+						<input type="radio" name="feeling" value="positive" checked>
+						<span class="radio__text">Скорее положительное</span>
+					</label>
+				</p>
+				<p>
+					<label class="radio">
+						<input type="radio" name="feeling" value="negative">
+						<span class="radio__text">Скорее отрицательное</span>
+					</label>
+				</p>
+				<p>
+					<label class="radio">
+						<input type="radio" name="feeling" value="difficult">
+						<span class="radio__text">Затрудняюсь ответить</span>
+					</label>
+				</p>
+			</fieldset>
+
+			<fieldset class="showplaces">
+				<h2>Посещенные Достопримечательности:</h2>
+				<p>
+					<label class="checkbox">
+						<input type="checkbox" name="bridge">
+						<span class="checkbox__text">Мост Дьявола</span>
+					</label>
+				</p>
+				<p>
+					<label class="checkbox">
+						<input type="checkbox" name="mountain">
+						<span class="checkbox__text">Гора-Колокол</span>
+					</label>
+				</p>
+				<p>
+					<label class="checkbox">
+						<input type="checkbox" name="park">
+						<span class="checkbox__text">Слайд-парк</span>
+					</label>
+				</p>
+				<p>
+					<label class="checkbox">
+						<input type="checkbox" name="rock">
+						<span class="checkbox__text">Красные скалы</span>
+					</label>
+				</p>
+			</fieldset>
+
+			<fieldset class="emotions">
+				<h2>Опишите свои эмоции:</h2>
+				<label>
+					<textarea name="emotions" cols="29" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+				</label>
+			</fieldset>
+
+			<input class="btn review-btn" type="submit" value="Отправить отзыв">
+		</form>
+
+	</main>
+	<footer class="page-footer">
+		<b class="page-footer__hashtag">#visitsedona</b>
+
+		<div class="social page-footer__social">
+			<a class="btn  social__btn--twr" href="https://twitter.com/?lang=ru"></a>
+			<a class="btn  social__btn--fb" href="https://www.facebook.com/"></a>
+			<a class="btn  social__btn--youtube" href="https://www.youtube.com/"></a>
+		</div>
+
+		<div class="page-footer__copyright">
+			<span>Разработано</span>
+			<a href="https://htmlacademy.ru/">
+				<svg class="htmlacademy" width="27px" height="34px" viewBox="0 0 154.38 195.33">
+					<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+				</svg>
+			</a>
+		</div>
+	</footer>
+
+	<script src="js/common.js"></script>
+</body>
+
+</html>

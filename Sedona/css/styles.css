@@ -696,35 +696,265 @@ body {
 
 .review {
   margin-top: 40px;
-  text-align: center;
+  margin-bottom: 22px;
   padding: 0 20px;
-  margin-bottom: 22px; }
+  text-align: center; }
 
 .review__title {
+  margin-bottom: 35px;
   font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 35px; }
+  line-height: 26px; }
 
 .review__text {
+  font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
-  font-weight: normal; }
+  line-height: 24px; }
 
-.main-form fieldset {
+.form fieldset {
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
   border: none;
-  border-top: 1px solid #000; }
+  border-top: 1px solid #e5e5e5; }
 
-.main-form input {
-  background-color: #f2f2f2;
-  border: none; }
-  .main-form input:hover {
+.form h2 {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: center; }
+
+.form input {
+  border: none;
+  outline: none; }
+
+.fullname {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  line-height: 26px; }
+  .fullname label {
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333; }
+  .fullname input {
+    box-sizing: border-box;
+    height: 56px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    background-color: #f2f2f2; }
+    .fullname input:hover {
+      background-color: #e5e5e5; }
+    .fullname input:active {
+      background-color: #d5d5d5; }
+  .fullname h2 {
+    margin-bottom: 24px; }
+  .fullname p {
+    margin-top: 0;
+    margin-bottom: 20px; }
+    .fullname p:last-child {
+      margin-bottom: 0; }
+
+.fullname__name {
+  width: 230px;
+  margin-left: 9px; }
+
+.fullname__surname {
+  width: 192px;
+  margin-left: 10px; }
+
+.fullname__patronymic {
+  width: 194px;
+  margin-left: 13px; }
+
+.fullname__name:focus,
+.fullname__patronymic:focus,
+.fullname__surname:focus {
+  background-color: #ffffff;
+  border: 4px solid #e5e5e5; }
+  .fullname__name:focus:hover,
+  .fullname__patronymic:focus:hover,
+  .fullname__surname:focus:hover {
+    background-color: #ffffff; }
+
+.contacts {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 28px; }
+  .contacts h2 {
+    margin-bottom: 30px; }
+  .contacts label {
+    padding-left: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333; }
+  .contacts input {
+    height: 56px;
+    margin-top: 14px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    background-color: #f2f2f2;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+    .contacts input:hover {
+      background-color: #e5e5e5; }
+    .contacts input:active {
+      background-color: #d5d5d5; }
+  .contacts p {
+    margin-top: 0;
+    margin-bottom: 20px; }
+    .contacts p:last-child {
+      margin-bottom: 0; }
+
+.phone-icon,
+.email-icon {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  margin-left: -11px;
+  vertical-align: bottom;
+  background-color: #e6e6e6; }
+
+.phone-icon {
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px; }
+
+.email-icon {
+  background-image: url(../img/icon-email.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px; }
+
+.feeling {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 20px; }
+  .feeling p {
+    margin: 0; }
+
+.radio input {
+  z-index: -1;
+  opacity: 0; }
+
+.radio__text {
+  position: relative;
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-left: 60px;
+  font-size: 18px;
+  text-transform: none;
+  cursor: pointer; }
+  .radio__text::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: -15px;
+    width: 55px;
+    height: 55px;
+    background-color: #f2f2f2;
+    border-radius: 50%; }
+  .radio__text::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background-color: #333333;
+    border-radius: 50%;
+    opacity: 0; }
+  .radio__text:hover::before {
     background-color: #e5e5e5; }
-  .main-form input:active {
+  .radio__text:active::after {
+    background-color: #a4a4a4; }
+  .radio__text:active::before {
     background-color: #d5d5d5; }
 
-.full-name label {
-  font-size: 14px;
-  line-height: 26px; }
+.radio input:checked + .radio__text::after {
+  opacity: 1; }
+
+.showplaces {
+  width: 280px;
+  margin: 0 auto; }
+  .showplaces p {
+    margin: 0; }
+  .showplaces h2 {
+    margin-bottom: 10px; }
+
+.checkbox input {
+  z-index: -1;
+  opacity: 0; }
+
+.checkbox__text {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 63px;
+  font-size: 18px;
+  text-transform: none;
+  cursor: pointer; }
+  .checkbox__text::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    width: 56px;
+    height: 56px;
+    background-color: #f2f2f2;
+    border-radius: 10%; }
+  .checkbox__text:hover::before {
+    background-color: #e5e5e5; }
+  .checkbox__text:active::before {
+    background-color: #d5d5d5; }
+
+.checkbox input:checked + .checkbox__text::before {
+  background-image: url(../img/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 16px; }
+
+.emotions {
+  width: 280px;
+  margin: 0 auto; }
+  .emotions h2 {
+    margin-bottom: 17px; }
+  .emotions textarea {
+    margin-bottom: 51px;
+    padding: 20px;
+    background-color: #f2f2f2; }
+    .emotions textarea::-webkit-input-placeholder {
+      font-weight: bold;
+      color: #000000;
+      opacity: 1; }
+    .emotions textarea:-ms-input-placeholder {
+      font-weight: bold;
+      color: #000000;
+      opacity: 1; }
+    .emotions textarea::-ms-input-placeholder {
+      font-weight: bold;
+      color: #000000;
+      opacity: 1; }
+    .emotions textarea::placeholder {
+      font-weight: bold;
+      color: #000000;
+      opacity: 1; }
+
+.review-btn {
+  width: 280px;
+  height: 58px;
+  margin: 0 auto;
+  margin-bottom: 77px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 21px;
+  color: #ffffff;
+  text-transform: uppercase; }
 
 @media (max-width: 767px) {
   .review__text br {
@@ -772,7 +1002,8 @@ body {
 
 .htmlacademy {
   width: 27px;
-  height: 34px; }
+  height: 34px;
+  transition: all 0.15s ease; }
   .htmlacademy:hover {
     fill: #81b3d2; }
   .htmlacademy:active {
