@@ -62,103 +62,114 @@
 		<form class="form" action="">
 
 			<fieldset class="fullname">
-				<h2>Представьтесь:</h2>
-				<p>
-					<label>
-						Имя*:
-						<input class="fullname__name" type="text" name="name">
-					</label>
-				</p>
-				<p>
-					<label>
-						Фамилия*:
-						<input class="fullname__surname" type="text" name="surname">
-					</label>
-				</p>
-				<p>
-					<label>
-						Отчество:
-						<input class="fullname__patronymic" type="text" name="patronymic">
-					</label>
-				</p>
+				<div class="fullname__wrapper">
+					<h2 class="fullname__title">Представьтесь:</h2>
+					<p>
+						<label>
+							Имя*:
+							<input class="fullname__name" type="text" name="name">
+						</label>
+					</p>
+					<p>
+						<label>
+							Фамилия*:
+							<input class="fullname__surname" type="text" name="surname">
+						</label>
+					</p>
+					<p>
+						<label>
+							Отчество:
+							<input class="fullname__patronymic" type="text" name="patronymic">
+						</label>
+					</p>
+				</div>
 			</fieldset>
 
 			<fieldset class="contacts">
-				<h2>Контактная информация:</h2>
-				<p>
-					<label>
-						Контактный телефон*:
-						<input type="tel" name="phone" placeholder="Введите телефон">
-						<span class="phone-icon"></span>
-					</label>
-				</p>
-				<p>
-					<label>
-						Электронная почта*:
-						<input type="email" name="mail" placeholder="Введите e-mail">
-						<span class="email-icon"></span>
-					</label>
-				</p>
+				<div class="contacts__wrapper">
+					<h2 class="contacts__title">Контактная информация:</h2>
+					<p>
+						<label>
+							<span>Контактный</span> телефон*:
+							<input class="phone" type="tel" name="phone" placeholder="Введите телефон">
+						</label>
+					</p>
+					<p>
+						<label>
+							Электронная почта*:
+							<input class="email" type="email" name="mail" placeholder="Введите e-mail">
+						</label>
+					</p>
+				</div>
 			</fieldset>
 
 			<fieldset class="feeling">
-				<h2>Ваше общее впечатление:</h2>
-				<p>
-					<label class="radio">
-						<input type="radio" name="feeling" value="positive" checked>
-						<span class="radio__text">Скорее положительное</span>
-					</label>
-				</p>
-				<p>
-					<label class="radio">
-						<input type="radio" name="feeling" value="negative">
-						<span class="radio__text">Скорее отрицательное</span>
-					</label>
-				</p>
-				<p>
-					<label class="radio">
-						<input type="radio" name="feeling" value="difficult">
-						<span class="radio__text">Затрудняюсь ответить</span>
-					</label>
-				</p>
+				<div class="feeling__wrapper">
+					<h2 class="feeling__title">Ваше общее впечатление:</h2>
+					<p>
+						<label class="radio">
+							<input type="radio" name="feeling" value="positive" checked>
+							<span class="radio__text">Скорее положительное</span>
+						</label>
+					</p>
+					<p>
+						<label class="radio">
+							<input type="radio" name="feeling" value="negative">
+							<span class="radio__text">Скорее отрицательное</span>
+						</label>
+					</p>
+					<p>
+						<label class="radio">
+							<input type="radio" name="feeling" value="difficult">
+							<span class="radio__text">Затрудняюсь ответить</span>
+						</label>
+					</p>
+				</div>
 			</fieldset>
 
 			<fieldset class="showplaces">
-				<h2>Посещенные Достопримечательности:</h2>
-				<p>
-					<label class="checkbox">
-						<input type="checkbox" name="bridge">
-						<span class="checkbox__text">Мост Дьявола</span>
-					</label>
-				</p>
-				<p>
-					<label class="checkbox">
-						<input type="checkbox" name="mountain">
-						<span class="checkbox__text">Гора-Колокол</span>
-					</label>
-				</p>
-				<p>
-					<label class="checkbox">
-						<input type="checkbox" name="park">
-						<span class="checkbox__text">Слайд-парк</span>
-					</label>
-				</p>
-				<p>
-					<label class="checkbox">
-						<input type="checkbox" name="rock">
-						<span class="checkbox__text">Красные скалы</span>
-					</label>
-				</p>
+				<div class="showplaces__wrapper">
+					<h2 class="showplaces__title">Посещенные <br> Достопримечательности:</h2>
+					<p>
+						<label class="checkbox">
+							<input type="checkbox" name="bridge">
+							<span class="checkbox__text">Мост Дьявола</span>
+						</label>
+					</p>
+					<p>
+						<label class="checkbox">
+							<input type="checkbox" name="mountain">
+							<span class="checkbox__text">Гора-Колокол</span>
+						</label>
+					</p>
+					<p>
+						<label class="checkbox">
+							<input type="checkbox" name="park">
+							<span class="checkbox__text">Слайд-парк</span>
+						</label>
+					</p>
+					<p>
+						<label class="checkbox">
+							<input type="checkbox" name="rock">
+							<span class="checkbox__text">Красные скалы</span>
+						</label>
+					</p>
+				</div>
 			</fieldset>
 
 			<fieldset class="emotions">
-				<h2>Опишите свои эмоции:</h2>
-				<label>
-					<textarea name="emotions" cols="29" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
-				</label>
+				<div class="emotions__wrapper">
+					<h2 class="emotions__title">Опишите свои эмоции:</h2>
+					<label>
+						<textarea class="emotions__textarea" name="emotions" cols="29" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+					</label>
+				</div>
 			</fieldset>
+			<div class="btn-wrapper">
+				<input class="btn btn--review" type="submit" value="Отправить отзыв">
 
-			<input class="btn review-btn" type="submit" value="Отправить отзыв">
+				<div class="remark">* — обязательные поля</div>
+			</div>
 		</form>
 
 	</main>

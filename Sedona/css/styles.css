@@ -710,13 +710,6 @@ body {
   font-size: 14px;
   line-height: 24px; }
 
-.form fieldset {
-  padding-top: 24px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border: none;
-  border-top: 1px solid #e5e5e5; }
-
 .form h2 {
   margin-top: 0;
   font-size: 18px;
@@ -726,9 +719,19 @@ body {
   border: none;
   outline: none; }
 
-.fullname {
+fieldset {
+  margin: 0;
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: none;
+  border-top: 1px solid #e5e5e5; }
+
+.fullname__wrapper {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto; }
+
+.fullname {
   padding-bottom: 25px;
   line-height: 26px; }
   .fullname label {
@@ -747,13 +750,17 @@ body {
       background-color: #e5e5e5; }
     .fullname input:active {
       background-color: #d5d5d5; }
-  .fullname h2 {
-    margin-bottom: 24px; }
   .fullname p {
     margin-top: 0;
     margin-bottom: 20px; }
     .fullname p:last-child {
       margin-bottom: 0; }
+
+.fullname__title {
+  margin-bottom: 24px; }
+
+.form .fullname__title {
+  text-align: left; }
 
 .fullname__name {
   width: 230px;
@@ -777,12 +784,12 @@ body {
   .fullname__surname:focus:hover {
     background-color: #ffffff; }
 
-.contacts {
+.contacts__wrapper {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto; }
+
+.contacts {
   padding-bottom: 28px; }
-  .contacts h2 {
-    margin-bottom: 30px; }
   .contacts label {
     padding-left: 20px;
     font-weight: normal;
@@ -795,10 +802,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     color: #000000;
-    background-color: #f2f2f2;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none; }
+    background-color: #f2f2f2; }
     .contacts input:hover {
       background-color: #e5e5e5; }
     .contacts input:active {
@@ -809,30 +813,26 @@ body {
     .contacts p:last-child {
       margin-bottom: 0; }
 
-.phone-icon,
-.email-icon {
-  display: inline-block;
-  width: 58px;
-  height: 58px;
-  margin-left: -11px;
-  vertical-align: bottom;
-  background-color: #e6e6e6; }
+.contacts__title {
+  margin-bottom: 30px; }
 
-.phone-icon {
-  background-image: url(../img/icon-phone.svg);
+.phone {
+  width: 250px;
+  background-image: url(../img/form-phone.svg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 18px; }
+  background-position: right center; }
 
-.email-icon {
-  background-image: url(../img/icon-email.svg);
+.email {
+  width: 250px;
+  background-image: url(../img/form-email.svg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 18px; }
+  background-position: right center; }
+
+.feeling__wrapper {
+  width: 280px;
+  margin: 0 auto; }
 
 .feeling {
-  width: 280px;
-  margin: 0 auto;
   padding-bottom: 20px; }
   .feeling p {
     margin: 0; }
@@ -878,13 +878,17 @@ body {
 .radio input:checked + .radio__text::after {
   opacity: 1; }
 
-.showplaces {
+.showplaces__wrapper {
   width: 280px;
   margin: 0 auto; }
+
+.showplaces {
+  padding-bottom: 15px; }
   .showplaces p {
     margin: 0; }
-  .showplaces h2 {
-    margin-bottom: 10px; }
+
+.showplaces__title {
+  margin-bottom: 10px; }
 
 .checkbox input {
   z-index: -1;
@@ -919,33 +923,40 @@ body {
   background-position: center center;
   background-size: 24px 16px; }
 
-.emotions {
+.emotions__wrapper {
   width: 280px;
   margin: 0 auto; }
-  .emotions h2 {
-    margin-bottom: 17px; }
-  .emotions textarea {
-    margin-bottom: 51px;
-    padding: 20px;
-    background-color: #f2f2f2; }
-    .emotions textarea::-webkit-input-placeholder {
-      font-weight: bold;
-      color: #000000;
-      opacity: 1; }
-    .emotions textarea:-ms-input-placeholder {
-      font-weight: bold;
-      color: #000000;
-      opacity: 1; }
-    .emotions textarea::-ms-input-placeholder {
-      font-weight: bold;
-      color: #000000;
-      opacity: 1; }
-    .emotions textarea::placeholder {
-      font-weight: bold;
-      color: #000000;
-      opacity: 1; }
 
-.review-btn {
+.emotions {
+  padding-bottom: 0; }
+
+.emotions__textarea {
+  border: none;
+  margin-bottom: 51px;
+  padding: 20px;
+  width: 240px;
+  background-color: #f2f2f2; }
+  .emotions__textarea::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #000000;
+    opacity: 1; }
+  .emotions__textarea:-ms-input-placeholder {
+    font-weight: bold;
+    color: #000000;
+    opacity: 1; }
+  .emotions__textarea::-ms-input-placeholder {
+    font-weight: bold;
+    color: #000000;
+    opacity: 1; }
+  .emotions__textarea::placeholder {
+    font-weight: bold;
+    color: #000000;
+    opacity: 1; }
+
+.emotions__title {
+  margin-bottom: 17px; }
+
+.btn--review {
   width: 280px;
   height: 58px;
   margin: 0 auto;
@@ -958,6 +969,8 @@ body {
 
 @media (max-width: 767px) {
   .review__text br {
+    display: none; }
+  .remark {
     display: none; } }
 
 @media (min-width: 768px) {
@@ -966,12 +979,152 @@ body {
     margin-bottom: 80px;
     padding: 0 60px; }
   .review__title {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  fieldset {
+    border: none; }
+  .feeling {
+    width: 43%;
+    order: -1;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 7%;
+    box-shadow: inset -1px 0 0 #dbdbdb; }
+  .feeling__wrapper {
+    margin: 0; }
+  .fullname {
+    width: 36%;
+    padding-top: 0;
+    padding-right: 7%;
+    padding-bottom: 0;
+    padding-left: 6%; }
+  .fullname__wrapper {
+    margin: 0; }
+  .radio__text {
+    margin-bottom: 32px; }
+  .feeling__title {
+    margin-bottom: 50px; }
+  .fullname__title {
+    margin-bottom: 53px;
+    text-align: left; }
+  .form h2 {
+    font-size: 21px; }
+  .contacts {
+    flex-basis: 100%;
+    padding-top: 53px;
+    padding-left: 60px;
+    padding-right: 60px; }
+  .contacts__wrapper {
+    width: 640px; }
+  .phone {
+    width: 620px; }
+  .email {
+    width: 620px; }
+  .showplaces {
+    flex-basis: 100%;
+    padding-top: 26px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px; }
+  .showplaces__title {
+    flex-basis: 100%;
+    margin-bottom: 32px; }
+  .showplaces__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0; }
+    .showplaces__wrapper p {
+      width: 270px; }
+  .emotions {
+    flex-basis: 100%;
+    padding-left: 60px;
+    padding-right: 60px; }
+  .emotions__wrapper {
+    width: 100%;
+    margin: 0; }
+  .emotions__textarea {
+    width: 94%;
+    margin-bottom: 55px; }
+  .emotions__title {
+    margin-bottom: 55px; }
+  .remark {
+    font-size: 14px;
+    color: #333333;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .btn--review {
+    margin: 0;
+    width: 324px; }
+  .btn-wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 61px; } }
 
 @media (min-width: 1200px) {
   .review {
     margin-top: 107px;
-    margin-bottom: 70px; } }
+    margin-bottom: 57px;
+    padding-left: 120px;
+    padding-right: 120px; }
+  .feeling {
+    width: 32.5%;
+    padding-left: 10%;
+    padding-right: 8.5%; }
+  .feeling__wrapper {
+    width: auto; }
+  .fullname {
+    width: 32.5%;
+    padding-right: 10%;
+    padding-left: 6.5%; }
+  .fullname__name {
+    width: 350px; }
+  .fullname__surname {
+    width: 312px; }
+  .fullname__patronymic {
+    width: 314px; }
+  .fullname__wrapper {
+    width: auto; }
+  .email,
+  .phone {
+    width: 315px;
+    margin-left: 13px; }
+  .contacts span {
+    display: none; }
+  .contacts {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 12px; }
+  .contacts__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; }
+  .contacts__title {
+    flex-basis: 100%;
+    margin-bottom: 56px; }
+  .showplaces {
+    padding-bottom: 37px; }
+  .showplaces__title {
+    margin-bottom: 27px; }
+  .emotions {
+    padding-left: 120px;
+    padding-right: 120px; }
+  .btn--review {
+    width: 480px; }
+  .btn-wrapper {
+    margin-bottom: 64px;
+    padding-left: 120px;
+    padding-right: 120px; } }
 
 .page-footer {
   display: flex;
