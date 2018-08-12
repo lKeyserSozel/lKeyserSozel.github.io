@@ -189,16 +189,27 @@ body {
     background-image: url(../img/page-header__close-button.svg);
     background-repeat: no-repeat;
     cursor: pointer; }
-  .main-nav--closed .main-nav__item {
-    display: none; }
+  .main-nav--closed .main-nav__link {
+    height: 0;
+    padding: 0;
+    border: none;
+    font-size: 0;
+    transition: all 0.3s ease; }
   .main-nav--nojs .main-nav__item--close {
     display: none; }
-  .main-nav--nojs .main-nav__item {
-    display: block; }
+  .main-nav--nojs .main-nav__link {
+    height: 40px;
+    padding: 6px;
+    border-top: 1px solid #9ac2db;
+    border-bottom: 1px solid #678fa8;
+    font-size: 18px; }
   .main-nav--nojs .main-nav__toggle {
     display: none; }
-  .main-nav--opened .main-nav__item {
-    display: block; } }
+  .main-nav--opened .main-nav__link {
+    padding: 6px;
+    height: 40px;
+    font-size: 18px;
+    transition: all 0.3s ease; } }
 
 .page-main__slogan {
   margin-top: 43px;
