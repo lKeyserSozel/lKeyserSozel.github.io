@@ -2,13 +2,13 @@
   font-family: 'PT Sans';
   font-weight: bold;
   font-display: swap;
-  src: url(../fonts/PT_Sans-Web-Bold.ttf) format("truetype"), url("../fonts/pt_sans-web-bold-webfont.woff2") format("woff2"), url("../fonts/pt_sans-web-bold-webfont.woff") format("woff"); }
+  src: url("../fonts/PT_Sans-Web-Bold.ttf") format("truetype"), url("../fonts/pt_sans-web-bold-webfont.woff2") format("woff2"), url("../fonts/pt_sans-web-bold-webfont.woff") format("woff"); }
 
 @font-face {
   font-family: 'PT Sans';
   font-weight: normal;
   font-display: swap;
-  src: url(../fonts/PT_Sans-Web-Regular.ttf) format("truetype"), url("../fonts/pt_sans-web-regular-webfont.woff2") format("woff2"), url("../fonts/pt_sans-web-regular-webfont.woff") format("woff"); }
+  src: url("../fonts/PT_Sans-Web-Regular.ttf") format("truetype"), url("../fonts/pt_sans-web-regular-webfont.woff2") format("woff2"), url("../fonts/pt_sans-web-regular-webfont.woff") format("woff"); }
 
 body {
   min-width: 320px;
@@ -770,9 +770,6 @@ fieldset {
 .fullname__title {
   margin-bottom: 24px; }
 
-.form .fullname__title {
-  text-align: left; }
-
 .fullname__name {
   width: 230px;
   margin-left: 9px; }
@@ -807,6 +804,7 @@ fieldset {
     font-size: 14px;
     color: #333333; }
   .contacts input {
+    display: block;
     height: 56px;
     margin-top: 14px;
     padding-left: 20px;
@@ -942,11 +940,11 @@ fieldset {
   padding-bottom: 0; }
 
 .emotions__textarea {
-  border: none;
+  width: 240px;
   margin-bottom: 51px;
   padding: 20px;
-  width: 240px;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  border: none; }
   .emotions__textarea::-webkit-input-placeholder {
     font-weight: bold;
     color: #000000;
@@ -999,8 +997,8 @@ fieldset {
   fieldset {
     border: none; }
   .feeling {
-    width: 43%;
     order: -1;
+    width: 43%;
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -1023,15 +1021,36 @@ fieldset {
   .fullname__title {
     margin-bottom: 53px;
     text-align: left; }
+  .form .fullname__title {
+    text-align: left; }
   .form h2 {
     font-size: 21px; }
   .contacts {
     flex-basis: 100%;
     padding-top: 53px;
-    padding-left: 60px;
-    padding-right: 60px; }
+    padding-right: 60px;
+    padding-left: 60px; }
+  .contacts__title {
+    flex-basis: 100%;
+    display: flex;
+    width: 100%; }
+    .contacts__title::before, .contacts__title::after {
+      content: "";
+      position: relative;
+      top: 12px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 100px;
+      height: 1px;
+      background-color: #dbdbdb; }
+    .contacts__title::before {
+      margin-right: 60px; }
+    .contacts__title::after {
+      margin-left: 60px; }
   .contacts__wrapper {
-    width: 640px; }
+    display: flex;
+    flex-wrap: wrap;
+    width: auto; }
   .phone {
     width: 620px; }
   .email {
@@ -1039,24 +1058,38 @@ fieldset {
   .showplaces {
     flex-basis: 100%;
     padding-top: 26px;
-    padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    padding-left: 60px; }
   .showplaces__title {
+    display: flex;
     flex-basis: 100%;
     margin-bottom: 32px; }
+    .showplaces__title::before, .showplaces__title::after {
+      content: "";
+      position: relative;
+      top: 12px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 100px;
+      height: 1px;
+      background-color: #dbdbdb; }
+    .showplaces__title::before {
+      margin-right: 60px; }
+    .showplaces__title::after {
+      margin-left: 60px; }
   .showplaces__wrapper {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     margin: 0; }
     .showplaces__wrapper p {
       width: 270px; }
   .emotions {
     flex-basis: 100%;
-    padding-left: 60px;
-    padding-right: 60px; }
+    padding-right: 60px;
+    padding-left: 60px; }
   .emotions__wrapper {
     width: 100%;
     margin: 0; }
@@ -1066,32 +1099,32 @@ fieldset {
   .emotions__title {
     margin-bottom: 55px; }
   .remark {
-    font-size: 14px;
-    color: #333333;
-    font-weight: normal;
     margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333333; }
   .btn--review {
-    margin: 0;
-    width: 324px; }
+    width: 324px;
+    margin: 0; }
   .btn-wrapper {
-    padding-left: 60px;
-    padding-right: 60px;
-    flex-basis: 100%;
     display: flex;
+    flex-basis: 100%;
     justify-content: space-between;
-    margin-bottom: 61px; } }
+    margin-bottom: 61px;
+    padding-right: 60px;
+    padding-left: 60px; } }
 
 @media (min-width: 1200px) {
   .review {
     margin-top: 107px;
     margin-bottom: 57px;
-    padding-left: 120px;
-    padding-right: 120px; }
+    padding-right: 120px;
+    padding-left: 120px; }
   .feeling {
     width: 32.5%;
-    padding-left: 10%;
-    padding-right: 8.5%; }
+    padding-right: 8.5%;
+    padding-left: 10%; }
   .feeling__wrapper {
     width: auto; }
   .fullname {
@@ -1113,30 +1146,31 @@ fieldset {
   .contacts span {
     display: none; }
   .contacts {
-    padding-left: 120px;
     padding-right: 120px;
-    padding-bottom: 12px; }
+    padding-bottom: 12px;
+    padding-left: 120px; }
   .contacts__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%; }
   .contacts__title {
-    flex-basis: 100%;
     margin-bottom: 56px; }
   .showplaces {
-    padding-bottom: 37px; }
+    padding-bottom: 37px;
+    padding-right: 120px;
+    padding-left: 120px; }
   .showplaces__title {
     margin-bottom: 27px; }
   .emotions {
-    padding-left: 120px;
-    padding-right: 120px; }
+    padding-right: 120px;
+    padding-left: 120px; }
   .btn--review {
     width: 480px; }
   .btn-wrapper {
     margin-bottom: 64px;
-    padding-left: 120px;
-    padding-right: 120px; } }
+    padding-right: 120px;
+    padding-left: 120px; } }
 
 .error-popup {
   position: fixed;
