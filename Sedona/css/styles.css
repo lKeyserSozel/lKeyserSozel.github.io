@@ -826,13 +826,15 @@ fieldset {
   margin-bottom: 30px; }
 
 .phone {
-  width: 250px;
+  padding-right: 58px;
+  width: 192px;
   background-image: url(../img/form-phone.svg);
   background-repeat: no-repeat;
   background-position: right center; }
 
 .email {
-  width: 250px;
+  padding-right: 58px;
+  width: 192px;
   background-image: url(../img/form-email.svg);
   background-repeat: no-repeat;
   background-position: right center; }
@@ -1052,9 +1054,9 @@ fieldset {
     flex-wrap: wrap;
     width: auto; }
   .phone {
-    width: 620px; }
+    width: 562px; }
   .email {
-    width: 620px; }
+    width: 562px; }
   .showplaces {
     flex-basis: 100%;
     padding-top: 26px;
@@ -1141,7 +1143,7 @@ fieldset {
     width: auto; }
   .email,
   .phone {
-    width: 315px;
+    width: 257px;
     margin-left: 13px; }
   .contacts span {
     display: none; }
