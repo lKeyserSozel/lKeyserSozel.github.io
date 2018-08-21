@@ -17,3 +17,15 @@ priceBtn.forEach(function (el, i) {
 	})
 });
 
+
+//Media Queries with JavaScript
+
+var window_size = window.matchMedia('(min-width: 768px)');
+
+if (window.matchMedia('(min-width: 768px)').matches) {
+	reviewBtn.forEach(function (el, i) {
+		el.addEventListener('click', function () {
+			reviewSlider.style.marginLeft = i * -655 + 'px';
+		})
+	});
+}

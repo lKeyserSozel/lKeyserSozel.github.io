@@ -112,18 +112,18 @@
 
 		<div class="effect">
 			<div class="effect__img">
-				<picture>
-					<source media="(min-width: 768px)" srcset="">
-				</picture>
+
 			</div>
 
-			<h3 class="effect__title">Эффект на 24 часа!</h3>
+			<div class="effect__descr">
+				<h3 class="effect__title">Эффект<br>на 24 часа!</h3>
 
-			<p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект
-				от использования приложения длится целые сутки!
-			</p>
+				<p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект
+					от&nbsp;использования приложения длится целые&nbsp;сутки!
+				</p>
 
-			<a href="">Узнать больше об иследовании</a>
+				<a class="effect__info" href="">Узнать больше об иследовании</a>
+			</div>
 		</div>
 
 		<div class="review">
@@ -131,19 +131,28 @@
 			<ul class="review__slider">
 
 				<li class="review__item">
-					<h3 class="review__title">Николай Петров</h3>
+					<div class="review__author">
+						<h3 class="review__title">Николай Петров</h3>
+						<span class="review__author-info">25 лет, водитель трамвая</span>
+					</div>
 					<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
 						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 				</li>
 
 				<li class="review__item">
-					<h3 class="review__title">Николай Петров</h3>
+					<div class="review__author">
+						<h3 class="review__title">Николай Петров</h3>
+						<span class="review__author-info">25 лет, водитель трамвая</span>
+					</div>
 					<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
 						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 				</li>
 
 				<li class="review__item">
-					<h3 class="review__title">Николай Петров</h3>
+					<div class="review__author">
+						<h3 class="review__title">Николай Петров</h3>
+						<span class="review__author-info">25 лет, водитель трамвая</span>
+					</div>
 					<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
 						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 				</li>
@@ -222,7 +231,7 @@
 		</div>
 
 		<div class="contacts">
-			<h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+			<h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
 
 			<div class="contacts__item">
 				<h4 class="contacts__subtitle">Звоните:</h4>
@@ -246,7 +255,11 @@
 
 
 	<footer class="page-footer">
-		<div class="logo page-footer__logo"></div>
+		<div class="logo page-footer__logo">
+			<svg class="page-footer__logo-icon" width="147" height="40">
+				<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+			</svg>
+		</div>
 
 		<div class="social">
 			<ul>
@@ -262,7 +275,12 @@
 			</ul>
 		</div>
 
-		<div class="page-footer__copyright">Разработано</div>
+		<div class="copyright  page-footer__copyright">
+			<span class="copyright__text">Разработано</span>
+			<svg class="copyright__htmlacademy" width="27" height="34">
+				<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+			</svg>
+		</div>
 	</footer>
 
 	<script src="js/slider.js"></script>

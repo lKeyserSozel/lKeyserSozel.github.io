@@ -10,6 +10,12 @@
   font-display: swap;
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"); }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"); }
+
 body {
   min-width: 320px;
   margin: 0;
@@ -217,8 +223,8 @@ body {
 
 .download-app__info {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: normal;
+  color: #fff;
+  font-weight: 200;
   text-transform: none; }
 
 .page-main__title {
@@ -226,7 +232,7 @@ body {
   margin-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
-  font-weight: normal;
+  font-weight: 200;
   font-size: 24px;
   text-align: center;
   color: #283645; }
@@ -313,6 +319,7 @@ body {
 
 .review__title {
   margin-top: 0;
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 18px; }
 
@@ -366,6 +373,34 @@ body {
 .review__btn-wrapper input:checked + .review__btn::after {
   opacity: 1; }
 
+.review__author-info {
+  display: none; }
+
+@media (min-width: 768px) {
+  .review {
+    width: 608px;
+    padding-left: 60px;
+    padding-right: 60px; }
+  .review__item {
+    width: 610px; }
+  .review__author-info {
+    display: inline;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645; }
+  .review__title {
+    margin-bottom: 0; }
+  .review__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 50px; }
+  .review__text {
+    order: -1; }
+  .review__author {
+    margin-bottom: 30px; } }
+
 .contacts {
   padding-right: 20px;
   padding-left: 20px; }
@@ -373,10 +408,12 @@ body {
 .contacts__title {
   margin-top: 48px;
   margin-bottom: 30px;
-  font-weight: normal;
+  font-weight: 200;
   font-size: 24px;
   text-align: center;
   color: #283645; }
+  .contacts__title br {
+    display: none; }
 
 .contacts__subtitle {
   margin-top: 0;
@@ -390,7 +427,7 @@ body {
 
 .contacts__info {
   display: block;
-  font-weight: normal;
+  font-weight: 200;
   font-size: 24px;
   text-align: center;
   color: #d22856; }
@@ -412,6 +449,23 @@ body {
   background-repeat: no-repeat;
   background-position: 50% -70px, center 115px, center -425px;
   background-size: 1200px ,36px, 1200px; }
+
+@media (min-width: 768px) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .contacts__title {
+    flex-basis: 100%;
+    font-size: 40px;
+    line-height: 40px; }
+    .contacts__title br {
+      display: block; }
+  .contacts__item {
+    width: 270px; }
+  .map {
+    height: 380px;
+    background-position: 50% -37px,center 197px,center -340px; } }
 
 .price {
   height: 300px;
@@ -464,7 +518,7 @@ body {
 
 .price__cost {
   display: block;
-  font-weight: normal;
+  font-weight: 200;
   font-size: 18px;
   color: #f1f2f3; }
 
@@ -560,5 +614,70 @@ body {
   .price__standart {
     background-position: 0 0; } }
 
+.effect {
+  display: none; }
+
+@media (min-width: 768px) {
+  .effect {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin-top: 60px; }
+  .effect__descr {
+    width: 350px;
+    text-align: left; }
+  .effect__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 6px; }
+  .effect__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #283645;
+    font-weight: normal;
+    margin-bottom: 4px;
+    padding-right: 42px; }
+  .effect__info {
+    color: #d22856; }
+  .effect__img {
+    width: 350px;
+    height: 350px;
+    background-image: url(../img/effect__timer.svg);
+    background-repeat: no-repeat;
+    background-size: 256px;
+    background-position: 40% top; } }
+
 .page-footer {
   display: none; }
+
+@media (min-width: 768px) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding-top: 36px;
+    padding-bottom: 51px;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .social ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .social li {
+    display: inline-block; }
+  .social a {
+    display: inline-block;
+    width: 46px;
+    height: 45px;
+    border: 3px solid #e9ebec;
+    border-radius: 50%; }
+  .copyright__text {
+    vertical-align: top;
+    margin-right: 10px; }
+  .copyright__htmlacademy {
+    fill: #d22856;
+    cursor: pointer; }
+    .copyright__htmlacademy:hover {
+      fill: #283645; }
+    .copyright__htmlacademy:active {
+      opacity: 0.3; } }
