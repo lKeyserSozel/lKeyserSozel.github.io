@@ -16,12 +16,12 @@
 			<div class="intro__image">
 				<nav class="main-nav">
 					<ul class="main-nav__list  main-nav__list--closed">
-						<li class="logo  main-nav__logo">
-							<picture>
-								<source media="(min-width: 1200px)" srcset="img/logo-desk.svg">
-								<source media="(min-width: 768px)" srcset="img/logo-tab.svg">
-								<img src="img/logo-mob.svg" alt="Logo">
-							</picture>
+						<li class="main-nav__logo">
+							<svg class="logo-icon  logo-icon--nav" width="147" height="43">
+								<use class="logo-icon__glasses" xlink:href="img/sprite.svg#glasses"></use>
+								<use class="logo-icon__text" xlink:href="img/sprite.svg#text"></use>
+								<use class="logo-icon__stars" xlink:href="img/sprite.svg#stars"></use>
+							</svg>
 							<svg class="main-nav__burger" width="50" height="24">
 								<use xlink:href="img/sprite.svg#icon-main-nav__burger"></use>
 							</svg>
@@ -80,7 +80,7 @@
 		<h2 class="page-main__title">
 			Устали от серости мегаполиса?
 			<br>
-			<br>Нам есть, что вам предложить!
+			<br>Нам есть, что вам<br> предложить!
 		</h2>
 
 		<div class="features">
@@ -157,6 +157,7 @@
 						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 				</li>
 			</ul>
+
 
 			<div class="review__btn-wrapper">
 				<label>
@@ -245,7 +246,7 @@
 
 			<div class="contacts__item">
 				<h4 class="contacts__subtitle">Приезжайте в гости:</h4>
-				<b class="contacts__info">ул. Большая Конюшенная, 19/8</b>
+				<b class="contacts__info">ул. Большая<br> Конюшенная, 19/8</b>
 			</div>
 		</div>
 
@@ -255,22 +256,24 @@
 
 
 	<footer class="page-footer">
-		<div class="logo page-footer__logo">
-			<svg class="page-footer__logo-icon" width="147" height="40">
-				<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+		<div class="page-footer__logo">
+			<svg class="logo-icon  logo-icon--footer" width="147" height="43">
+				<use class="logo-icon__glasses" xlink:href="img/sprite.svg#glasses"></use>
+				<use class="logo-icon__text" xlink:href="img/sprite.svg#text"></use>
+				<use class="logo-icon__stars" xlink:href="img/sprite.svg#stars"></use>
 			</svg>
 		</div>
 
 		<div class="social">
 			<ul>
 				<li>
-					<a href="" class="social__link"></a>
+					<a href="" class="social__link--tw" title="Twitter"></a>
 				</li>
 				<li>
-					<a href="" class="social__link"></a>
+					<a href="" class="social__link--fb" title="Facebook"></a>
 				</li>
 				<li>
-					<a href="" class="social__link"></a>
+					<a href="" class="social__link--youtube" title="Youtube"></a>
 				</li>
 			</ul>
 		</div>
