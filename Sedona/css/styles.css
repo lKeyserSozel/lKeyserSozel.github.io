@@ -206,7 +206,6 @@ body {
   .main-nav--nojs .main-nav__toggle {
     display: none; }
   .main-nav--opened .main-nav__link {
-    padding: 6px;
     height: 40px;
     font-size: 18px;
     transition: all 0.3s ease; } }
