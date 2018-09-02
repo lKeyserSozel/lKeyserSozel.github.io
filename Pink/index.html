@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Pink</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/styles.min.css">
 </head>
 
@@ -17,11 +18,13 @@
 				<nav class="main-nav">
 					<ul class="main-nav__list  main-nav__list--closed">
 						<li class="main-nav__logo">
-							<svg class="logo-icon  logo-icon--nav" width="147" height="43">
-								<use class="logo-icon__glasses" xlink:href="img/sprite.svg#glasses"></use>
-								<use class="logo-icon__text" xlink:href="img/sprite.svg#text"></use>
-								<use class="logo-icon__stars" xlink:href="img/sprite.svg#stars"></use>
-							</svg>
+							<a href="index.html">
+								<svg class="logo-icon  logo-icon--nav" width="147" height="43">
+									<use class="logo-icon__glasses" xlink:href="img/sprite.svg#glasses"></use>
+									<use class="logo-icon__text" xlink:href="img/sprite.svg#text"></use>
+									<use class="logo-icon__stars" xlink:href="img/sprite.svg#stars"></use>
+								</svg>
+							</a>
 							<svg class="main-nav__burger" width="50" height="24">
 								<use xlink:href="img/sprite.svg#icon-main-nav__burger"></use>
 							</svg>
@@ -30,7 +33,7 @@
 							</svg>
 						</li>
 						<li class="main-nav__item">
-							<a href="" class="main-nav__link  main-nav__link--active">Главная</a>
+							<a href="index.html" class="main-nav__link  main-nav__link--active">Главная</a>
 						</li>
 						<li class="main-nav__item">
 							<a href="" class="main-nav__link">Фотографии</a>
@@ -39,7 +42,7 @@
 							<a href="" class="main-nav__link">Конкурс</a>
 						</li>
 						<li class="main-nav__item">
-							<a href="" class="main-nav__link">HTML ACADEMY</a>
+							<a href="https://htmlacademy.ru" class="main-nav__link">HTML ACADEMY</a>
 						</li>
 					</ul>
 				</nav>
@@ -95,7 +98,7 @@
 				<div class="features__item">
 					<h3 class="features__title">Меняет мир вокруг</h3>
 					<p class="features__text">
-						Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+						Сделайте снимок и украсьте&nbsp;его смайликом или текстовой подписью, чтобы усилить эффект</p>
 				</div>
 
 				<div class="features__item">
@@ -116,10 +119,10 @@
 			</div>
 
 			<div class="effect__descr">
-				<h3 class="effect__title">Эффект<br>на 24 часа!</h3>
+				<h3 class="effect__title">Эффект <br>на 24 часа!</h3>
 
-				<p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект
-					от&nbsp;использования приложения длится целые&nbsp;сутки!
+				<p class="effect__text">Британские ученые провели исследования и доказали, что&nbsp;положительный
+					эффект от&nbsp;использования приложения длится целые&nbsp;сутки!
 				</p>
 
 				<a class="effect__info" href="">Узнать больше об иследовании</a>
@@ -128,50 +131,48 @@
 
 		<div class="review">
 
-			<ul class="review__slider">
-
-				<li class="review__item">
-					<div class="review__author">
-						<h3 class="review__title">Николай Петров</h3>
-						<span class="review__author-info">25 лет, водитель трамвая</span>
+			<!-- Slider main container -->
+			<div class="swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="review__item">
+						<div class="review__author">
+							<h3 class="review__title">Николай Петров</h3>
+							<span class="review__author-info">25 лет, водитель трамвая</span>
+						</div>
+						<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+							привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
+							фотографии!»
+						</p>
 					</div>
-					<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
-						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-				</li>
-
-				<li class="review__item">
-					<div class="review__author">
-						<h3 class="review__title">Николай Петров</h3>
-						<span class="review__author-info">25 лет, водитель трамвая</span>
+					<div class="review__item">
+						<div class="review__author">
+							<h3 class="review__title">Николай Петров</h3>
+							<span class="review__author-info">25 лет, водитель трамвая</span>
+						</div>
+						<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+							привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
+							фотографии!»
+						</p>
 					</div>
-					<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
-						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-				</li>
-
-				<li class="review__item">
-					<div class="review__author">
-						<h3 class="review__title">Николай Петров</h3>
-						<span class="review__author-info">25 лет, водитель трамвая</span>
+					<div class="review__item">
+						<div class="review__author">
+							<h3 class="review__title">Николай Петров</h3>
+							<span class="review__author-info">25 лет, водитель трамвая</span>
+						</div>
+						<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+							привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
+							фотографии!»
+						</p>
 					</div>
-					<p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
-						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-				</li>
-			</ul>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
 
-
-			<div class="review__btn-wrapper">
-				<label>
-					<input type="radio" name="slider-review" checked>
-					<span class="review__btn"></span>
-				</label>
-				<label>
-					<input type="radio" name="slider-review">
-					<span class="review__btn"></span>
-				</label>
-				<label>
-					<input type="radio" name="slider-review">
-					<span class="review__btn"></span>
-				</label>
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
 			</div>
 
 		</div>
@@ -257,36 +258,68 @@
 
 	<footer class="page-footer">
 		<div class="page-footer__logo">
-			<svg class="logo-icon  logo-icon--footer" width="147" height="43">
-				<use class="logo-icon__glasses" xlink:href="img/sprite.svg#glasses"></use>
-				<use class="logo-icon__text" xlink:href="img/sprite.svg#text"></use>
-				<use class="logo-icon__stars" xlink:href="img/sprite.svg#stars"></use>
-			</svg>
+			<a href="index.html">
+				<svg class="logo-icon  logo-icon--footer" width="147" height="43">
+					<use class="logo-icon__glasses" xlink:href="img/sprite.svg#glasses"></use>
+					<use class="logo-icon__text" xlink:href="img/sprite.svg#text"></use>
+					<use class="logo-icon__stars" xlink:href="img/sprite.svg#stars"></use>
+				</svg>
+			</a>
 		</div>
 
 		<div class="social">
 			<ul>
 				<li>
-					<a href="" class="social__link--tw" title="Twitter"></a>
+					<a href="https://twitter.com" class="social__link--tw" title="Twitter"></a>
 				</li>
 				<li>
-					<a href="" class="social__link--fb" title="Facebook"></a>
+					<a href="https://www.facebook.com" class="social__link--fb" title="Facebook"></a>
 				</li>
 				<li>
-					<a href="" class="social__link--youtube" title="Youtube"></a>
+					<a href="https://www.youtube.com" class="social__link--youtube" title="Youtube"></a>
 				</li>
 			</ul>
 		</div>
 
 		<div class="copyright  page-footer__copyright">
 			<span class="copyright__text">Разработано</span>
-			<svg class="copyright__htmlacademy" width="27" height="34">
-				<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-			</svg>
+			<a href="https://htmlacademy.ru">
+				<svg class="copyright__htmlacademy" width="27" height="34">
+					<use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+				</svg>
+			</a>
 		</div>
 	</footer>
 
 	<script src="js/slider.js"></script>
+	<script src="js/swiper.min.js"></script>
+
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+			// Optional parameters
+			direction: 'horizontal',
+			loop: true,
+			slideClass: 'review__item',
+
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+
+				// modifierClass: 'review__pagination-',
+				// bulletClass: 'review__pagination-bullet',
+				// clickableClass: 'review__pagination--clickable',
+				// bulletActiveClass: 'review__pagination-bullet--active',
+			},
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+		})
+	</script>
 </body>
 
 </html>
