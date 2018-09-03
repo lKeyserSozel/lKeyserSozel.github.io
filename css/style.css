@@ -1,0 +1,40 @@
+body {
+	
+	padding: 0 60px;
+	color: #ffffff;
+	height: 800px;
+
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+
+	background: -webkit-gradient(linear, 74% 0%, 34% 87%, from(#5502B5), to(#70DBD8));
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+}
+
+ul {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+}
+
+a::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: width .3s;
+}
+
+a:hover::after {
+	width: 100%;
+}
