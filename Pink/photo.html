@@ -47,6 +47,7 @@
 			<div class="intro__image">
 				<h1 class="intro__title">Фотографии <br>пользователей</h1>
 			</div>
+		</div>
 	</header>
 
 	<main class="page-main">
@@ -59,11 +60,11 @@
 
 			<div class="photo  gallery__main-item">
 				<div class="photo__img">
-					<img src="img/photo__panorama-desktop.jpg">
+					<img src="img/photo__panorama-desktop.jpg" alt="user-best-photo">
 					<span class="photo__panorama">Панорама дня</span>
 				</div>
 			</div>
-			<div class="container">
+			<div class="gallery__container">
 				<div class="photo__info  photo__info--panorama">
 					<div class="photo__author">Анна<span class="photo__time"> (5 минут назад)</span></div>
 					<p class="photo__descr">
@@ -77,7 +78,7 @@
 					<div class="photo__img">
 						<picture>
 							<source media="(min-width: 768px)" srcset="img/photo-1-desktop.jpg">
-							<img src="img/photo-1-mobile.jpg">
+							<img src="img/photo-1-mobile.jpg" alt="user-photo">
 						</picture>
 					</div>
 
@@ -94,7 +95,7 @@
 					<div class="photo__img">
 						<picture>
 							<source media="(min-width: 768px)" srcset="img/photo-2-desktop.jpg">
-							<img src="img/photo-2-mobile.jpg">
+							<img src="img/photo-2-mobile.jpg" alt="user-photo">
 						</picture>
 					</div>
 
@@ -111,7 +112,7 @@
 					<div class="photo__img">
 						<picture>
 							<source media="(min-width: 768px)" srcset="img/photo-3-desktop.jpg">
-							<img src="img/photo-3-mobile.jpg">
+							<img src="img/photo-3-mobile.jpg" alt="user-photo">
 						</picture>
 					</div>
 
@@ -128,7 +129,7 @@
 					<div class="photo__img">
 						<picture>
 							<source media="(min-width: 768px)" srcset="img/photo-4-desktop.jpg">
-							<img src="img/photo-4-mobile.jpg">
+							<img src="img/photo-4-mobile.jpg" alt="user-photo">
 						</picture>
 					</div>
 
@@ -145,7 +146,7 @@
 					<div class="photo__img">
 						<picture>
 							<source media="(min-width: 768px)" srcset="img/photo-5-desktop.jpg">
-							<img src="img/photo-5-mobile.jpg">
+							<img src="img/photo-5-mobile.jpg" alt="user-photo">
 						</picture>
 					</div>
 
@@ -162,7 +163,7 @@
 					<div class="photo__img">
 						<picture>
 							<source media="(min-width: 768px)" srcset="img/photo-6-desktop.jpg">
-							<img src="img/photo-6-mobile.jpg">
+							<img src="img/photo-6-mobile.jpg" alt="user-photo">
 						</picture>
 					</div>
 
@@ -176,29 +177,68 @@
 			</div>
 		</div>
 
-		<h2 class="page-main__title  page-main__title--your-photo">Затмите их всех! <br>Выкладывайте все, что накопилось в телефоне!</h2>
+		<h2 class="page-main__title  page-main__title--your-photo">Затмите их всех! <br>Выкладывайте все, что
+			накопилось в телефоне!</h2>
+
+
 		<div class="your-photo">
-			<div class="your-photo__img"></div>
-			<div class="your-photo__tools">
-				<div class="your-photo__crop">
-					<div class="your-photo__slider">
 
+			<div class="your-photo__img">
+				<picture>
+					<source media="(min-width: 768px)" srcset="img/your-photo--desk.jpg">
+					<img src="img/your-photo--mobile.jpg" alt="your-photo">
+				</picture>
+			</div>
+
+			<div class="tools  your-photo__tools">
+
+				<div class="tools-wrapper">
+
+					<div class="tools__crop">
+						<svg class="icon-crop  active-tool" width="48" height="48" viewBox="0 0 48 48">
+							<use xlink:href="img/sprite.svg#icon-crop"></use>
+						</svg>
+					</div>
+
+					<div class="tools__fill">
+						<svg class="icon-fill" width="48" height="48" viewBox="0 -3 48 48">
+							<use xlink:href="img/sprite.svg#icon-fill"></use>
+						</svg>
+					</div>
+
+					<div class="tools__contrast">
+						<svg class="icon-contrast" width="32" height="32" viewBox="0 0 32 32">
+							<use xlink:href="img/sprite.svg#icon-contrast"></use>
+						</svg>
 					</div>
 				</div>
-				<div class="your-photo__filling">
-					<div class="your-photo__slider">
 
-					</div>
+				<div class="sliders">
+
+						<div class="slider__line  slider__line--crop">
+							<svg class="slider__mark" width="14" height="14" viewBox="0 0 14 14">
+								<use xlink:href="img/sprite.svg#icon-slider__mark"></use>
+							</svg>
+						</div>
+
+						<div class="slider__line  slider__line--fill">
+							<svg class="slider__mark" width="14" height="14" viewBox="0 0 14 14">
+								<use xlink:href="img/sprite.svg#icon-slider__mark"></use>
+							</svg>
+						</div>
+
+						<div class="slider__line  slider__line--contrast">
+							<svg class="slider__mark" width="14" height="14" viewBox="0 0 14 14">
+								<use xlink:href="img/sprite.svg#icon-slider__mark"></use>
+							</svg>
+						</div>
 				</div>
-				<div class="your-photo__brightness">
-					<div class="your-photo__slider">
 
-					</div>
-				</div>
+			</div>
 
-
-				<button class="your-photo__post">Запостить</button>
-				<button class="your-photo__cancel">Отмена</button>
+			<div class="your-photo__button-wrapper">
+				<button class="your-photo__button  your-photo__button--post">Запостить</button>
+				<button class="your-photo__button  your-photo__button--cancel">Отмена</button>
 			</div>
 
 		</div>
