@@ -715,7 +715,7 @@ body {
   background-image: url(../img/map-triangle.svg), url(../img/map-market.svg), url(../img/map.png);
   background-repeat: no-repeat;
   background-position: 50% -70px, center 115px, center -425px;
-  background-size: 1200px ,36px, 1200px; }
+  background-size: 1200px,36px, 1200px; }
 
 @media (min-width: 768px) {
   .contacts {
@@ -742,7 +742,7 @@ body {
     order: 0; }
   .map {
     height: 500px;
-    background-size: 1200px ,36px, 1440px;
+    background-size: 1200px 120px ,36px, 1440px;
     background-position: 50% -1px, center 197px, center -435px; } }
 
 .price {
@@ -807,13 +807,13 @@ body {
   background-image: url(../img/table-on.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 31px; }
+  background-size: 31px 28px; }
 
 .off {
   background-image: url(../img/table-off.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 27px; }
+  background-size: 27px 28px; }
 
 .price__btn-wrapper {
   display: none; }
@@ -1065,7 +1065,6 @@ body {
 
 @media (min-width: 768px) {
   .photo {
-    display: flex;
     flex-direction: column; }
   .photo__info {
     display: flex;
@@ -1250,6 +1249,7 @@ body {
   .icon-crop,
   .icon-fill,
   .icon-contrast {
+    cursor: default;
     fill: #d22856; }
     .icon-crop:hover,
     .icon-fill:hover,
@@ -1667,6 +1667,7 @@ fieldset {
     margin-top: 55px;
     padding-right: 58px;
     padding-left: 58px;
+    padding-bottom: 30px;
     border: 2px solid #e5e5e5; }
   .contacts-form__title {
     display: block;
@@ -1681,6 +1682,7 @@ fieldset {
     background-image: url(../img/form-phone.svg);
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: 60px 59px;
     border-radius: 2px; }
   .contacts-form__email {
     width: 442px;
@@ -1688,6 +1690,7 @@ fieldset {
     background-image: url(../img/form-email.svg);
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: 60px 59px;
     border-radius: 2px; }
   .emotions {
     width: 524px;
@@ -2053,7 +2056,7 @@ fieldset {
 
 .social__link--fb {
   background-image: url(../img/social__fb.svg);
-  background-size: 9px; }
+  background-size: 9px 22px; }
 
 .social__link--youtube {
   background-image: url(../img/social__youtube.svg);
