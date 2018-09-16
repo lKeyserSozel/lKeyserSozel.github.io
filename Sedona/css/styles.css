@@ -101,10 +101,10 @@ body {
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8; }
 
-.main-nav__Item a[href]:hover {
+.main-nav__item a[href]:hover {
   background-color: #669ec0; }
 
-.main-nav__Item a[href]:active {
+.main-nav__item a[href]:active {
   color: #94b9d2;
   background-color: #5496bd; }
 
@@ -151,10 +151,10 @@ body {
       color: #000000;
       background-color: #ffffff;
       border: none; }
-  .main-nav__Item a[href]:hover {
+  .main-nav__item a[href]:hover {
     color: #81b3d2;
     background-color: #ffffff; }
-  .main-nav__Item a[href]:active {
+  .main-nav__item a[href]:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #ffffff; }
   .main-nav__item--active a {
@@ -197,7 +197,7 @@ body {
     transition: all 0.3s ease; }
   .main-nav--nojs .main-nav__item--close {
     display: none; }
-  .main-nav--nojs .main-nav__Item a {
+  .main-nav--nojs .main-nav__item a {
     height: 40px;
     padding: 6px;
     border-top: 1px solid #9ac2db;
