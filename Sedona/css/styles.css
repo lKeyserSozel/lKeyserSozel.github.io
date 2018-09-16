@@ -89,7 +89,7 @@ body {
   font-size: 18px;
   line-height: 40px; }
 
-.main-nav__link {
+.main-nav__item a {
   display: block;
   width: 320px;
   margin: 0 auto;
@@ -101,10 +101,10 @@ body {
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8; }
 
-.main-nav__link[href]:hover {
+.main-nav__Item a[href]:hover {
   background-color: #669ec0; }
 
-.main-nav__link[href]:active {
+.main-nav__Item a[href]:active {
   color: #94b9d2;
   background-color: #5496bd; }
 
@@ -114,7 +114,7 @@ body {
   width: 320px;
   min-height: 54px; }
 
-.logo__link {
+.main-nav__logo a {
   position: absolute;
   top: 0;
   left: 50%;
@@ -145,24 +145,24 @@ body {
     line-height: 26px; }
   .main-nav__item {
     width: 20%; }
-  .main-nav__link {
-    width: auto;
-    padding: 14px 0;
-    color: #000000;
-    background-color: #ffffff;
-    border: none; }
-  .main-nav__link[href]:hover {
+    .main-nav__item a {
+      width: auto;
+      padding: 14px 0;
+      color: #000000;
+      background-color: #ffffff;
+      border: none; }
+  .main-nav__Item a[href]:hover {
     color: #81b3d2;
     background-color: #ffffff; }
-  .main-nav__link[href]:active {
+  .main-nav__Item a[href]:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #ffffff; }
-  .main-nav__link--active {
+  .main-nav__item--active a {
     color: #766357;
     cursor: pointer; }
-    .main-nav__link--active:hover {
+    .main-nav__item--active a:hover {
       color: #604e43; }
-    .main-nav__link--active:active {
+    .main-nav__item--active a:active {
       color: rgba(118, 99, 87, 0.3); }
   .main-nav__logo {
     order: 0;
@@ -171,7 +171,7 @@ body {
     display: none; } }
 
 @media (min-width: 1200px) {
-  .logo__link {
+  .main-nav__logo a {
     width: 186px;
     height: 96px;
     margin-left: -93px; } }
@@ -189,7 +189,7 @@ body {
     background-image: url(../img/page-header__close-button.svg);
     background-repeat: no-repeat;
     cursor: pointer; }
-  .main-nav--closed .main-nav__link {
+  .main-nav--closed .main-nav__item a {
     height: 0;
     padding: 0;
     border: none;
@@ -197,7 +197,7 @@ body {
     transition: all 0.3s ease; }
   .main-nav--nojs .main-nav__item--close {
     display: none; }
-  .main-nav--nojs .main-nav__link {
+  .main-nav--nojs .main-nav__Item a {
     height: 40px;
     padding: 6px;
     border-top: 1px solid #9ac2db;
@@ -205,7 +205,8 @@ body {
     font-size: 18px; }
   .main-nav--nojs .main-nav__toggle {
     display: none; }
-  .main-nav--opened .main-nav__link {
+  .main-nav--opened .main-nav__item a {
+    padding: 6px;
     height: 40px;
     font-size: 18px;
     transition: all 0.3s ease; } }
