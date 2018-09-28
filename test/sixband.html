@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resistance Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="sixband">
+  <nav>
+    <ul>
+      <li class="nav-item"><a href="index.html">3 Band</a></li>
+      <li class="nav-item"><a href="fourband.html">4 Band</a></li>
+      <li class="nav-item"><a href="fiveband.html">5 Band</a></li>
+      <li class="nav-item defaultNav"><a href="#">6 Band</a></li>
+    </ul>
+  </nav>
+  <div id="calculator">
+    <div id="resistor-base">
+      <svg class="lins" preserveAspectRatio="xMidYMin slice" class="linessvg" width="185" height="68"  viewBox="0 0 185 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="lines">
+          <path class="lines" d="M92,70 c-7.5,33 -61,32 -56,60" />
+          <path class="lines" d="M117,68 c-7.5,53 203,31 198,60" />
+          <path class="lines" d="M142,68 c-7.5,53 461,30 456,60" />
+          <path class="lines" d="M168,68 c-7.5,53 461,29 456,60" />
+          <path class="lines" d="M202,68 c-7.5,53 461,28 456,60" />
+          <path class="lines" d="M230,70 c-7.5,53 461,15 456,60" />
+        </g>
+        <g id="arrows"></g>
+      </svg>
+      <svg class="ctl" preserveAspectRatio="xMidYMax slice" viewBox="0 0 220 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <mask id="clip-bands" x="-11" y="0" width="185" height="68" maskingUnits="userSpaceOnUse">
+            <use x="0" y="0" xlink:href="#shape" fill="#fff" />
+          </mask>
+          <path id="arrowS" d="M0,0 m-6,5 l6,-5 l6,5" />
+          <circle id="arrowD" cx="0" cy="0" r="5" />
+        </defs>
+        <rect id="lead" x="1" y="20" width="184" height="11" fill="#B5B5B6" />
+        <path fill="#F3C68E" id="shape" d="M50,0 c22.5,0 22.5,6 45,6 c22.5,0 25.5,-5 45,-6 a27.5,25 0 0,1 0,50 c-22.5,0 -22.5,-6 -45,-6 c-22.5,0 -27.5,5 -45,6 a30,25 0 0,1 0,-50" />
+
+        <g mask="url(#clip-bands)">
+          <path id="band" d="M57,0 v50" class="color-band"/>
+          <path id="band" d="M72,0 v50" class="color-band"/>
+          <path id="band" d="M87,0 v50" class="color-band"/>
+          <path id="band" d="M102,0 v50" class="color-band"/>
+          <path id="band" d="M117,0 v50" class="color-band"/>
+          <path id="band" d="M132,0 v50" class="color-band"/>
+        </g>
+      </svg>
+
+    </div>
+    <div id="values">
+      <h1 id="res-value" style="display: inline-block;">1.25KΩ</h1><h2 id="ppm-value" style="display: inline-block; margin: 0 0 0 3px">110ppm/K</h2>
+      <h3 id="tolerance-value">±1% (1.24KΩ – 1.26KΩ)</h3>
+    </div>
+  </div>
+  <div id="button-container">
+    <div data-band="6" class="buttons six-band-buttons" id="buttons">
+      <div></div>
+      <div class="title">1</div>
+      <div class="title">2</div>
+      <div class="title">3</div>
+      <div class="title">Mul</div>
+      <div class="title">Tol</div>
+      <div class="title"><sup>ppm</sup>/<sub>K</sub></div>
+      <div class="color">Black</div>
+      <div class="btn resistance-btn band1" data-band="0" value="0" style="background-color: #000">0</div>
+      <div class="btn resistance-btn band2" data-band="1" value="0" style="background-color: #000">0</div>
+      <div class="btn resistance-btn band3" data-band="2" data-band="2" value="0" style="background-color: #000">0</div>
+      <div class="btn resistance-btn band-multi" data-band="3" value="1" style="background-color: #000">x10<sup>0</sup></div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="250" style="background-color: #000">250</div>
+      <div></div>
+      <div class="color">Brown</div>
+      <div class="btn resistance-btn band1 defaultSelect" data-band="0" value="1" style="background-color: #4D3727">1</div>
+      <div class="btn resistance-btn band2" data-band="1" value="1" style="background-color: #4D3727">1</div>
+      <div class="btn resistance-btn band3" data-band="2" value="1" style="background-color: #4D3727">1</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="10" style="background-color: #4D3727">x10<sup>1</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="1" style="background-color: #4D3727">±1%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="100" style="background-color: #4D3727">100</div>
+      <div class="color">Red</div>
+      <div class="btn resistance-btn band1" data-band="0" value="2" style="background-color: #f20b0b">2</div>
+      <div class="btn resistance-btn band2 defaultSelect" data-band="1" value="2" style="background-color: #f20b0b">2</div>
+      <div class="btn resistance-btn band3" data-band="2" value="2" style="background-color: #f20b0b">2</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="100" style="background-color: #f20b0b">x10<sup>2</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="2" style="background-color: #f20b0b">±2%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="50" style="background-color: #f20b0b">50</div>
+      <div class="color">Orange</div>
+      <div class="btn resistance-btn band1" data-band="0" value="3" style="background-color: #ff8100">3</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="3" style="background-color: #ff8100">3</div>
+      <div class="btn resistance-btn band3" data-band="2" value="3" style="background-color: #ff8100">3</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="1000" style="background-color: #ff8100">x10<sup>3</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="3" style="background-color: #ff8100">±3%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="15" style="background-color: #ff8100">15</div>
+      <div class="color">Yellow</div>
+      <div class="btn resistance-btn band1" data-band="0" value="4" style="background-color: #fff745; color: #333">4</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="4" style="background-color: #fff745; color: #333">4</div>
+      <div class="btn resistance-btn band3" data-band="2" value="4" style="background-color: #fff745; color: #333">4</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="10000" style="background-color: #fff745; color: #333">x10<sup>4</sup></div>
+      <div class="btn resistance-btn band-tol defaultSelect" data-band="4" value="4" style="background-color: #fff745; color: #333">±4%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="25" style="background-color: #fff745; color: #333">25</div>
+      <div class="color">Green</div>
+      <div class="btn resistance-btn band1" data-band="0"  value="5" style="background-color: #4CAF50">5</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="5" style="background-color: #4CAF50">5</div>
+      <div class="btn resistance-btn band3 defaultSelect" data-band="2" value="5" style="background-color: #4CAF50">5</div>
+      <div class="btn resistance-btn band-multi defaultSelect" data-band="3" value="100000" style="background-color: #4CAF50">x10<sup>5</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="0.5" style="background-color: #4CAF50">±0.5%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="20" style="background-color: #4CAF50">20</div>
+      <div class="color">Blue</div>
+      <div class="btn resistance-btn band1" data-band="0"  value="6" style="background-color: #2196F3">6</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="6" style="background-color: #2196F3">6</div>
+      <div class="btn resistance-btn band3" data-band="2" value="6" style="background-color: #2196F3">6</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="1000000" style="background-color: #2196F3">x10<sup>6</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="0.25" style="background-color: #2196F3">±0.25%</div>
+      <div class="btn resistance-btn band-ppm defaultSelect" data-band="5" value="10" style="background-color: #2196F3">10</div>
+      <div class="color">Violet</div>
+      <div class="btn resistance-btn band1" data-band="0"  value="7" style="background-color: #f675d0">7</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="7" style="background-color: #f675d0">7</div>
+      <div class="btn resistance-btn band3" data-band="2" value="7" style="background-color: #f675d0">7</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="10000000" style="background-color: #f675d0">x10<sup>7</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="0.1" style="background-color: #f675d0">±0.1%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" value="5" style="background-color: #f675d0">5</div>
+      <div class="color">Grey</div>
+      <div class="btn resistance-btn band1" data-band="0"  value="8" style="background-color: #ccc; color: #333">8</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="8" style="background-color: #ccc; color: #333">8</div>
+      <div class="btn resistance-btn band3" data-band="2" value="8" style="background-color: #ccc; color: #333">8</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="100000000" style="background-color: #ccc; color: #333">x10<sup>8</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="0.05" style="background-color: #ccc; color: #333">±0.05%</div>
+      <div class="btn resistance-btn band-ppm" data-band="5" data-band="5" value="1" style="background-color: #ccc; color: #333">1</div>
+      <div class="color">White</div>
+      <div class="btn resistance-btn band1" data-band="0"  value="9" style="background-color: #fff; color: #333">9</div>
+      <div class="btn resistance-btn band2" data-band="1"  value="9" style="background-color: #fff; color: #333">9</div>
+      <div class="btn resistance-btn band3" data-band="2" value="9" style="background-color: #fff; color: #333">9</div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="1000000000" style="background-color: #fff; color: #333">x10<sup>9</sup></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="btn resistance-btn band-multi"  data-band="3" data-band="2"  value="5" style="background-color: #e1b12c; color: #333">x10<sup>-1</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="0.05" style="background-color: #e1b12c; color: #333">±0.05%</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="btn resistance-btn band-multi" data-band="3"  value="0.01" style="background-color: transparent; color: #0d4dff">x10<sup>-2</sup></div>
+      <div class="btn resistance-btn band-tol"  data-band="4" value="10" style="background-color: transparent; color: #0d4dff">±10%</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    var band1Value = "";
+    var band2Value = "";
+    var band3Value = "";
+    var multiplierValue = "";
+    var toleranceValue = "20"; //As percentage ±20%
+    var ppmValue = "";
+    var resistanceButtons = document.getElementsByClassName("resistance-btn");
+    for (var i = 0; i < resistanceButtons.length; i++) {
+      resistanceButtons[i].addEventListener("click", function() {
+        if (this.classList.contains("band1")) {
+          if (this.hasAttribute("value")) {
+            band1Value = this.getAttribute("value");
+          }
+        }
+        if (this.classList.contains("band2")) {
+          if (this.hasAttribute("value")) {
+            band2Value = this.getAttribute("value");
+          }
+        }
+        if (this.classList.contains("band3")) {
+          if (this.hasAttribute("value")) {
+            band3Value = this.getAttribute("value");
+          }
+        }
+        if (this.classList.contains("band-multi")) {
+          if (this.hasAttribute("value")) {
+            multiplierValue = this.getAttribute("value");
+          }
+        }
+        if (this.classList.contains("band-tol")) {
+          if (this.hasAttribute("value")) {
+            toleranceValue = this.getAttribute("value");
+          }
+        }
+        if (this.classList.contains("band-ppm")) {
+          if (this.hasAttribute("value")) {
+            ppmValue = this.getAttribute("value");
+          }
+        }
+        if (
+          band1Value !== "" &&
+          band2Value !== "" &&
+          band3Value !== "" &&
+          multiplierValue !== ""
+        ) {
+          calculateResistance(
+            band1Value,
+            band2Value,
+            band3Value,
+            multiplierValue,
+            toleranceValue,
+            ppmValue
+          );
+        }
+      });
+    }
+    function calculateResistance(band1, band2, band3, multiplier, tolerance, ppm) {
+      var resistanceValue = parseFloat(
+        (
+          parseInt(band1 + "" + band2 + "" + band3) * parseFloat(multiplier)
+        ).toPrecision(4)
+      );
+      var displayResistance = calculateValueWithMultiplier(resistanceValue);
+      document.getElementById("res-value").innerHTML = displayResistance;
+      if (ppm != "") {
+        document.getElementById("ppm-value").innerHTML = ppm + "ppm/K";
+      }
+      calculateTolerance(tolerance, resistanceValue);
+    }
+    function calculateTolerance(toleranceValue, resistanceValue) {
+      var tol = toleranceValue / 100 * resistanceValue;
+      var minRange = calculateValueWithMultiplier2(resistanceValue - tol);
+      var maxRange = calculateValueWithMultiplier2(resistanceValue + tol);
+      document.getElementById("tolerance-value").innerHTML =
+        "±" + toleranceValue + "% (" + minRange + " – " + maxRange + ")";
+    }
+    var defaultsClicks = document.getElementsByClassName("defaultSelect");
+    for (var j = 0; j < defaultsClicks.length; j++) {
+      defaultsClicks[j].click();
+    }
+  </script>
+</body>
+</html>
