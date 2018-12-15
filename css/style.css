@@ -72,6 +72,7 @@ a:hover::after {
 .weather__cloud {
 	transition: transform 0.9s ease-in-out;
 	transform-origin: 0 390px;
+	filter: drop-shadow( -4px 4px 0 #1c434d );
 }
 
 .weather:hover .weather__cloud {
