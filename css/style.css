@@ -16,6 +16,10 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	margin-top: 60px;
+}
+
 ul {
 	font-size: 21px;
 	font-weight: normal;
@@ -38,4 +42,47 @@ a::after {
 
 a:hover::after {
 	width: 100%;
+}
+
+@keyframes sun {
+	from {
+		transform: rotate(-360deg);
+	};
+	50% {
+		transform: rotate(180deg);
+	};
+	to {
+		transform: rotate(360deg);
+	};
+}
+
+.weather {
+	position: absolute;
+	top: 10px;
+	transform: translateX(-250px);
+	transition: all 0.7s ease-in-out;
+}
+
+.weather--on {
+	transform: translateX(-70px);
+}
+
+
+
+.weather__cloud {
+	transition: transform 0.9s ease-in-out;
+	transform-origin: 0 390px;
+}
+
+.weather:hover .weather__cloud {
+	transform: scale(0.6)
+	translateX(-800px)
+	rotate(-20deg);
+}
+
+
+
+.weather__sun {
+	animation: sun 12s infinite linear 1.6s;
+	transform-origin: 259px 164px;
 }
