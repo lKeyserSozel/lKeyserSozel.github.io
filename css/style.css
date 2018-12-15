@@ -1,3 +1,24 @@
+@keyframes opac {
+	from {
+		opacity: 0;
+	};
+	to {
+		opacity: 1;
+	};
+}
+
+@keyframes sun {
+	from {
+		transform: rotate(-360deg);
+	};
+	50% {
+		transform: rotate(180deg);
+	};
+	to {
+		transform: rotate(360deg);
+	};
+}
+
 body {
 	padding: 0 60px;
 	margin: 0;
@@ -7,9 +28,16 @@ body {
 
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 
+	
 	background: -webkit-gradient(linear, 74% 0%, 34% 87%, from(#5502B5), to(#70DBD8));
-	background-repeat: no-repeat;
 	background-size: cover;
+	animation: opac 2.2s ease;
+}
+
+.sunny {
+	background: #FFB75E;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
@@ -44,19 +72,8 @@ a:hover::after {
 	width: 100%;
 }
 
-@keyframes sun {
-	from {
-		transform: rotate(-360deg);
-	};
-	50% {
-		transform: rotate(180deg);
-	};
-	to {
-		transform: rotate(360deg);
-	};
-}
-
 .weather {
+	cursor: pointer;
 	position: absolute;
 	top: 10px;
 	transform: translateX(-250px);
@@ -75,7 +92,7 @@ a:hover::after {
 	filter: drop-shadow( -4px 4px 0 #1c434d );
 }
 
-.weather:hover .weather__cloud {
+.weather__cloud--closed {
 	transform: scale(0.6)
 	translateX(-800px)
 	rotate(-20deg);
