@@ -10,7 +10,9 @@
 
 	function hiddenCloud() {
 		weatherCloud.classList.toggle("weather__cloud--closed");
-		document.body.classList.toggle("sunny");
+		setTimeout(function () {
+			document.body.classList.toggle("sunny");
+		}, 500);
 	}
 	
 })();
