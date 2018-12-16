@@ -114,6 +114,12 @@ a:hover::after {
 
 @media(max-width: 430px) {
 	.weather {
-		display: none;
+		left: 45px;
+		width: 120px;
+		height: 60px;
+	}
+
+	h1 {
+		padding-left: 20px;
 	}
 }
