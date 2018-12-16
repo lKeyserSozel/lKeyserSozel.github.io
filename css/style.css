@@ -106,6 +106,27 @@ a:hover::after {
 }
 
 
+.car {
+	position: fixed;
+	bottom: 0;
+	transform: translateX(-210px);
+	transition: transform 20s linear;
+}
+
+.car--move {
+	transform: translateX(1350px);
+}
+
+.car__left-wheel {
+	animation: sun 3s infinite linear;
+	transform-origin: 137px 275px;
+}
+
+.car__right-wheel {
+	animation: sun 3s infinite linear;
+	transform-origin: 374px 275px;
+}
+
 @media(max-width: 550px) {
 	body {
 		padding: 0 20px;
