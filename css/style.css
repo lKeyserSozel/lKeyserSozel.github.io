@@ -110,11 +110,11 @@ a:hover::after {
 	position: fixed;
 	bottom: 0;
 	transform: translateX(-210px);
-	transition: transform 20s linear;
+	transition: transform 25s linear;
 }
 
 .car--move {
-	transform: translateX(1350px);
+	transform: translateX(3000px);
 }
 
 .car__left-wheel {
