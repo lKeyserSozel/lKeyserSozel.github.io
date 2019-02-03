@@ -1403,6 +1403,7 @@ fieldset {
   margin-bottom: 40px; }
 
 .page-footer__copyright {
+  text-transform: none;
   margin-bottom: 20px;
   font-weight: normal;
   font-size: 14px;
