@@ -46,11 +46,11 @@ body {
 	position: absolute;
 	top: 10px;
 	transform: translateX(-250px);
-	transition: all 0.5s ease-in-out;
 }
 
 .weather--on {
 	transform: translateX(-70px);
+	transition: all 0.5s ease-in-out;
 }
 
 
@@ -78,11 +78,11 @@ body {
 	position: fixed;
 	bottom: 0;
 	transform: translateX(-210px);
-	transition: transform 25s linear;
 }
 
 .car--move {
 	transform: translateX(3000px);
+	transition: transform 25s linear;
 }
 
 .car__left-wheel {
