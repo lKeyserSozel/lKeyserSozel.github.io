@@ -1,21 +1,30 @@
-(function onWeather() {
-	const weather = document.querySelector(".weather")
-	const weatherCloud = weather.querySelector(".weather__cloud")
+'use strict';
 
-	setTimeout(function () {
-		weather.classList.add("weather--on")
-	}, 1000);
+function weatherSetup() {
+	const weather = document.querySelector(".weather");
+	const weatherCloud = weather.querySelector(".weather__cloud");
+	const weatherCloudClass = weatherCloud.classList;
+	setTimeout(() => weather.classList.add("weather--on"), 1000);
 
-	weather.addEventListener('click', hiddenCloud)
+	function changeWeather() {
+		if (weatherCloudClass.contains("weather__cloud--opened")) {
+			weatherCloudClass.remove("weather__cloud--opened");
+			setTimeout(() => document.body.classList.remove("cloudy"), 500);
+			window.raindrops.forEach((el) => {
+				el.infinity = false;
+			});
 
-	function hiddenCloud() {
-		weatherCloud.classList.toggle("weather__cloud--closed")
-		moveCar();
+		} else {
+			weatherCloudClass.add("weather__cloud--opened");
+			moveCar();
+			setup();
+			setTimeout(() => document.body.classList.add("cloudy"), 500);
+		}
 
-		setTimeout(function () {
-			document.body.classList.toggle("sunny")
-		}, 500)
 	};
-	
-})();
+
+	weather.addEventListener('click', changeWeather);
+};
+
+weatherSetup();
 

@@ -1,44 +1,46 @@
 @keyframes opac {
 	from {
 		opacity: 0;
-	};
+	}
+	;
 	to {
 		opacity: 1;
-	};
+	}
+	;
 }
 
 @keyframes sun {
 	from {
 		transform: rotate(-360deg);
-	};
+	}
+	;
 	50% {
 		transform: rotate(180deg);
-	};
+	}
+	;
 	to {
 		transform: rotate(360deg);
-	};
+	}
+	;
 }
 
 body {
+	position: relative;
 	padding: 0 60px;
 	margin: 0;
 	height: 100vh;
 	color: #ffffff;
 	overflow: hidden;
-
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-
-	
-	background: -webkit-gradient(linear, 74% 0%, 17% 87%, from(#70DBD8), to(#5502B5));
-	
 	background-size: cover;
 	animation: opac 2.2s ease;
+	background: #FFB75E;
+	background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
+	background: linear-gradient(to right, #ED8F03, #FFB75E);
 }
 
-.sunny {
-	background: #FFB75E;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.cloudy {
+	background: -webkit-gradient(linear, 74% 0%, 17% 87%, from(#70DBD8), to(#5502B5));
 }
 
 .weather {
@@ -53,31 +55,28 @@ body {
 	transition: all 0.5s ease-in-out;
 }
 
-
 .weather__cloud {
-	transition: transform 0.9s ease-in-out;
+	transform: scale(0.6) translateX(-800px) rotate(-20deg);
+	filter: drop-shadow( -4px 4px 0 #1c434d);
 	transform-origin: 0 390px;
-	filter: drop-shadow( -4px 4px 0 #1c434d );
+	transition: transform 0.9s ease-in-out;
 }
 
-.weather__cloud--closed {
-	transform: scale(0.6)
-	translateX(-800px)
-	rotate(-20deg);
+.weather__cloud--opened {
+	transition: transform 0.9s ease-in-out;
+	transform: initial;
 }
-
-
 
 .weather__sun {
 	animation: sun 12s infinite linear 1.6s;
 	transform-origin: 259px 164px;
 }
 
-
 .car {
 	position: fixed;
 	bottom: 0;
 	transform: translateX(-210px);
+	z-index: -1;
 }
 
 .car--move {
@@ -107,8 +106,14 @@ body {
 		width: 120px;
 		height: 60px;
 	}
-
 	h1 {
 		padding-left: 20px;
 	}
+}
+
+#canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
 }
