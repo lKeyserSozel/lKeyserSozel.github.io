@@ -182,9 +182,23 @@ a:hover::after {
 	z-index: -1;
 }
 
-.station {
+.energy-station {
 	position: fixed;
 	bottom: -2px;
-	right: 450px;
+	right: 150px;
+	z-index: -2;
+}
+
+.bus {
+	position: fixed;
+	bottom: -19px;
+	right: 320px;
+	z-index: -2;
+}
+
+.bus-station {
+	position: fixed;
+	bottom: -23px;
+	right: 550px;
 	z-index: -2;
 }
