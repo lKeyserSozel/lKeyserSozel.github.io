@@ -1,4 +1,4 @@
-@keyframes opac {
+@keyframes opacity {
 	from {
 		opacity: 0;
 	}
@@ -9,7 +9,7 @@
 	;
 }
 
-@keyframes sun {
+@keyframes rotate {
 	from {
 		transform: rotate(-360deg);
 	}
@@ -24,6 +24,21 @@
 	;
 }
 
+@keyframes reversRotate {
+	from {
+		transform: rotate(360deg);
+	}
+	;
+	50% {
+		transform: rotate(-180deg);
+	}
+	;
+	to {
+		transform: rotate(-360deg);
+	}
+	;
+}
+
 body {
 	padding: 0 60px;
 	margin: 0;
@@ -31,10 +46,10 @@ body {
 	color: #ffffff;
 	overflow: hidden;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
+	background-size: cover;
+	animation: opacity 2.2s ease;
 	background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);
 	background: linear-gradient(to right, #ED8F03, #FFB75E);
-	background-size: cover;
-	animation: opac 2.2s ease;
 }
 
 h1 {
@@ -98,7 +113,7 @@ a:hover::after {
 }
 
 .weather__sun {
-	animation: sun 12s infinite linear 1.6s;
+	animation: rotate 12s infinite linear 1.6s;
 	transform-origin: 259px 164px;
 }
 
@@ -109,19 +124,38 @@ a:hover::after {
 	z-index: -1;
 }
 
-.car--move {
-	transform: translateX(3000px);
-	transition: transform 25s linear;
-}
-
 .car__left-wheel {
-	animation: sun 3s infinite linear;
 	transform-origin: 137px 275px;
 }
 
 .car__right-wheel {
-	animation: sun 3s infinite linear;
 	transform-origin: 374px 275px;
+}
+
+.car--move-right {
+	transform: translateX(3000px);
+	transition: transform 25s linear;
+}
+
+.car--move-right .car__left-wheel {
+	animation: rotate 3s infinite linear;
+}
+
+.car--move-right .car__right-wheel {
+	animation: rotate 3s infinite linear;
+}
+
+.car--move-left {
+	transform: translateX(-3000px);
+	transition: transform 25s linear;
+}
+
+.car--move-left .car__left-wheel {
+	animation: reversRotate 3s infinite linear;
+}
+
+.car--move-left .car__right-wheel {
+	animation: reversRotate 3s infinite linear;
 }
 
 @media(max-width: 550px) {
@@ -146,4 +180,11 @@ a:hover::after {
 	left: 0;
 	top: 0;
 	z-index: -1;
+}
+
+.station {
+	position: fixed;
+	bottom: -2px;
+	right: 450px;
+	z-index: -2;
 }
