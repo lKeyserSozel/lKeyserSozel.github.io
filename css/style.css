@@ -191,14 +191,56 @@ a:hover::after {
 
 .bus {
 	position: fixed;
-	bottom: -19px;
-	right: 320px;
+	bottom: -11px;
+	left: 470px;
 	z-index: -2;
 }
 
 .bus-station {
 	position: fixed;
 	bottom: -23px;
-	right: 550px;
+	left: 300px;
 	z-index: -2;
+}
+
+.bus-station use {
+	color: #0071CE;
+}
+
+.bus-station--close use {
+	color: rgb(206, 24, 0);
+}
+
+.forest {
+	position: fixed;
+	bottom: -7px;
+	z-index: -3;
+}
+
+.forest1 {
+	left: 10px;
+}
+
+.forest2 {
+	left: 210px;
+}
+
+.forest3 {
+	left: 420px;
+}
+
+.forest4 {
+	left: 620px;
+}
+
+.forest5 {
+	left: 820px;
+}
+
+.forest6 {
+	left: 1020px;
+}
+
+.forest7 {
+	left: 1220px;
 }

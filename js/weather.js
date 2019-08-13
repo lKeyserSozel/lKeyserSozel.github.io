@@ -30,14 +30,17 @@ const weather = new Weather();
 
 function weatherSetup() {
 	weather.on();
+	const busStation = document.querySelector('.bus-station');
 
 	function changeWeather() {
 		if (weather.cloud.classList.contains("weather__cloud--opened")) {
 			weather.sunny();
 			mainCar.moveLeft();
+			busStation.classList.remove('bus-station--close');
 		} else {
 			weather.cloudy();
 			mainCar.moveRight();
+			busStation.classList.add('bus-station--close');
 		}
 	};
 
